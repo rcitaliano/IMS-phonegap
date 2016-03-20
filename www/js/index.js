@@ -27,6 +27,9 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('load', this.onLoad, false);
+    },
+    onLoad: function () {
     },
     // deviceready Event Handler
     //
@@ -45,5 +48,7 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+        navigator.splashscreen.show();
+        setTimeout(function () { navigator.splashscreen.hide(); }, 3000);
     }
 };
