@@ -45,9 +45,19 @@
   <allow-intent href="mailto:*" />
   <allow-intent href="geo:*" />
   <icon src="icon.png"  width="180" height="180"/>
-  <splash src="splash.png" />
+  <splash src="splash.9.png" />
   <platform name="android">
     <allow-intent href="market:*" />
+    <icon src="res/mipmap-hdpi/ic_launcher.png" qualifier="hdpi" />
+    <icon src="res/mipmap-mdpi/ic_launcher.png" qualifier="mdpi" />
+    <icon src="res/mipmap-xhdpi/ic_launcher.png" qualifier="xhdpi" />
+    <icon src="res/mipmap-xxhdpi/ic_launcher.png" qualifier="xxhdpi" />
+    <icon src="res/mipmap-xxxhdpi/ic_launcher.png" qualifier="xxxhdpi" />
+    <splash src="res/drawable-hdpi/ic_launcher.png" qualifier="hdpi" />
+    <splash src="res/drawable-mdpi/ic_launcher.png" qualifier="mdpi" />
+    <splash src="res/drawable-xhdpi/ic_launcher.png" qualifier="xhdpi" />
+    <splash src="res/drawable-xxhdpi/ic_launcher.png" qualifier="xxhdpi" />
+    <splash src="res/drawable-xxxhdpi/ic_launcher.png" qualifier="xxxhdpi" />
   </platform>
   <platform name="ios">
     <allow-intent href="itms:*" />
