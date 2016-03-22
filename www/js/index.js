@@ -40,18 +40,17 @@ var app = {
 
         //=======================================carousel=======================================
         var carousel = $("#myCarousel");
-        carousel.carousel("pause").removeData();
-        carousel.carousel(0);
+
         var context = {
             items: [
-                { image: "assets/img/IMG_0383.JPG", title: "titolo1", text: "testo testo testo testo testo testo testo testo testo 1", link: "#", linkText: "link1" }
+                { image: "assets/img/IMG_0383.JPG", title:  "titolo1", text: "testo testo testo testo testo testo testo testo testo 1", link: "#", linkText: "link1" }
                 ,{ image: "assets/img/IMG_0607.JPG", title: "titolo2", text: "testo testo testo testo testo testo testo testo testo 2", link: "#", linkText: "link2" }
                 ,{ image: "assets/img/IMG_0709.JPG", title: "titolo3", text: "testo testo testo testo testo testo testo testo testo 3", link: "#", linkText: "link3" }
-                //,{ image: "assets/img/IMG_0607.JPG", title: "titolo4", text: "testo testo testo testo testo testo testo testo testo 4", link: "#", linkText: "" }
-                //,{ image: "assets/img/IMG_0709.JPG", title: "titolo5", text: "testo testo testo testo testo testo testo testo testo 5", link: "#", linkText: "" }
-                //,{ image: "assets/img/IMG_0383.JPG", title: "titolo6", text: "testo testo testo testo testo testo testo testo testo 6", link: "#", linkText: "" }
-                //,{ image: "assets/img/IMG_0383.JPG", title: "titolo7", text: "testo testo testo testo testo testo testo testo testo 7", link: "#", linkText: "" }
-                //,{ image: "assets/img/IMG_0383.JPG", title: "titolo8", text: "testo testo testo testo testo testo testo testo testo 8", link: "#", linkText: "" }
+                ,{ image: "assets/img/IMG_0607.JPG", title: "titolo4", text: "testo testo testo testo testo testo testo testo testo 4", link: "#", linkText: "link4" }
+                ,{ image: "assets/img/IMG_0709.JPG", title: "titolo5", text: "testo testo testo testo testo testo testo testo testo 5", link: "#", linkText: "link5" }
+                ,{ image: "assets/img/IMG_0383.JPG", title: "titolo6", text: "testo testo testo testo testo testo testo testo testo 6", link: "#", linkText: "link6" }
+                ,{ image: "assets/img/IMG_0383.JPG", title: "titolo7", text: "testo testo testo testo testo testo testo testo testo 7", link: "#", linkText: "link7" }
+                ,{ image: "assets/img/IMG_0383.JPG", title: "titolo8", text: "testo testo testo testo testo testo testo testo testo 8", link: "#", linkText: "link8" }
             ]
         };
         var templateIndicators = Handlebars.compile($("#carousel-indicators-template").html());
@@ -70,6 +69,9 @@ var app = {
             else
                 $(this).addClass("second-slide");
         });
+        //this must be done here to refresh the carousel after we added the dynamic items
+        carousel.carousel("pause").removeData();
+        carousel.carousel(0);
         //=======================================carousel end=======================================
         //=======================================headings=======================================
         var templateHeadings = Handlebars.compile($("#headings-template").html());
