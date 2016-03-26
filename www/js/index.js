@@ -31,6 +31,22 @@ var app = {
     },
     onLoad: function () {
     },
+    loadContact: function () {
+        $.get("contact.html", function (data) {
+            $("#mainContent").html("");
+            $("#mainContent").html(data);
+
+            var context = {
+                items: [
+                  { image: "assets/img/facebook.png", title: "I.M.S.", text: "pagina facebook", link: "http://www.facebook.com/IMS-lavorare-per-Dio--181077808611069", linkText: "contatta" }
+                , { image: "assets/img/gmail.jpg", title: "I.M.S", text: "e-mail", link: "mailto:shoekconcerti@gmail.com", linkText: "contatta" }
+                , { image: "assets/img/youtube.png", title: "SHOEK (I.M.S.)", text: "canale youtube", link: "https://www.youtube.com/channel/UCt0aYLk6t69Amu_9tL-RNSQ", linkText: "contatta" }]
+            };
+            var templateHeadings = Handlebars.compile($("#headings-template").html());
+            $("#headings").append(templateHeadings(context));
+            app.setActiveMenu("#about");
+        });
+    },
     loadAbout: function () {
         $.get("about.html", function (data) {
             $("#mainContent").html("");
