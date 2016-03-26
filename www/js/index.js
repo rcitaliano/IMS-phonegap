@@ -54,28 +54,28 @@ var app = {
 
             var context = {
                 items: [
-                  { image: "assets/img/team/ariene.jpg", title: "ariene",          text: "fotografa", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/fabiana.jpg", title: "fabiana",      text: "fotografa", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/jolanda.jpg", title: "jolandaaaaaaa",      text: "cantante", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/julieta.jpg", title: "julieta", text: "cantante", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/ludovica.jpg", title: "ludovica",    text: "ballerina", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/miriana.jpg", title: "miriana", text: "ballerina", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/mirko.jpg", title: "mirko", text: "ballerino", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/robson.jpg", title: "robson",        text: "informatico", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/samuel.jpg", title: "samuel",        text: "fotografo", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/sandy.jpg", title: "sandy", text: "cantante", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/thomas.jpg", title: "thomas", text: "cantante", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/valentina.jpg", title: "valentina", text: "cantante", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/valeria.jpg", title: "valeria", text: "ballerina", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/1.jpg", title: "1", text: "ruolo", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/2.jpg", title: "2", text: "ruolo", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/3.jpg", title: "3", text: "ruolo", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/4.jpg", title: "4", text: "ruolo", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/5.jpg", title: "5", text: "ruolo", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/6.jpg", title: "6", text: "ruolo", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/7.jpg", title: "7", text: "ruolo", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/8.jpg", title: "8", text: "ruolo", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/9.jpg", title: "9", text: "ruolo", link: "#", linkText: "contatta" }]
+                  { image: "assets/img/team/ariene.jpg", title: "ariene",          text: "fotografa", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/fabiana.jpg", title: "fabiana",      text: "fotografa", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/jolanda.jpg", title: "jolanda",      text: "cantante", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/julieta.jpg", title: "julieta", text: "cantante", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/ludovica.jpg", title: "ludovica",    text: "ballerina", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/miriana.jpg", title: "miriana", text: "ballerina", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/mirko.jpg", title: "mirko", text: "ballerino", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/robson.jpg", title: "robson",        text: "informatico", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/samuel.jpg", title: "samuel",        text: "fotografo", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/brenda.jpg", title: "brenda", text: "cantante", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/thomas.jpg", title: "thomas", text: "cantante", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/valentina.jpg", title: "valentina", text: "cantante", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/valeria.jpg", title: "valeria", text: "ballerina", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/1.jpg", title: "fabiana", text: "cantante", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/2.jpg", title: "chiara", text: "ballerina", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/3.jpg", title: "marcelo", text: "musicista", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/4.jpg", title: "laura", text: "ballerina", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/5.jpg", title: "noemi", text: "cantante", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/6.jpg", title: "mimmo", text: "musicista", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/7.jpg", title: "dafne", text: "ballerina", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/8.jpg", title: "tilde", text: "cantante", link: "javascript:app.loadContact();", linkText: "contatta" }
+                , { image: "assets/img/team/9.jpg", title: "sandy", text: "cantante", link: "javascript:app.loadContact();", linkText: "contatta" }]
             };
             var templateHeadings = Handlebars.compile($("#headings-template").html());
             $("#headings").append(templateHeadings(context));
