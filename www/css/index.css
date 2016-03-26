@@ -113,3 +113,22 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+.team {
+    
+}
+.team-member{
+    background-color:#afafaf;
+    color: #cfcfcf;
+    float:left; 
+    margin: 3px;
+    padding: 5px;
+    border-width: 10px; 
+    border-radius: 10px 10px; 
+    border-color: #7f7f7f;
+    border-style: solid;
+}
+.team-member img{
+    border-color: inherit;
+    border-width: 10px; 
+    border-style: solid;
+}

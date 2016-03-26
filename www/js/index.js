@@ -40,7 +40,7 @@ var app = {
                 items: [
                   { image: "assets/img/team/ariene.jpg", title: "ariene",          text: "fotografa", link: "#", linkText: "contatta" }
                 , { image: "assets/img/team/fabiana.jpg", title: "fabiana",      text: "fotografa", link: "#", linkText: "contatta" }
-                , { image: "assets/img/team/jolanda.jpg", title: "jolanda",      text: "cantante", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/jolanda.jpg", title: "jolandaaaaaaa",      text: "cantante", link: "#", linkText: "contatta" }
                 , { image: "assets/img/team/julieta.jpg", title: "julieta", text: "cantante", link: "#", linkText: "contatta" }
                 , { image: "assets/img/team/ludovica.jpg", title: "ludovica",    text: "ballerina", link: "#", linkText: "contatta" }
                 , { image: "assets/img/team/miriana.jpg", title: "miriana", text: "ballerina", link: "#", linkText: "contatta" }
