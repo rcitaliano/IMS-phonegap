@@ -31,37 +31,71 @@ var app = {
     },
     onLoad: function () {
     },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function () {
-        //app.receivedEvent('deviceready');
+    loadAbout: function () {
+        $.get("about.html", function (data) {
+            $("#mainContent").html("");
+            $("#mainContent").html(data);
+
+            var context = {
+                items: [
+                  { image: "assets/img/team/ariene.jpg", title: "ariene",          text: "fotografa", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/fabiana.jpg", title: "fabiana",      text: "fotografa", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/jolanda.jpg", title: "jolanda",      text: "cantante", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/julieta.jpg", title: "julieta", text: "cantante", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/ludovica.jpg", title: "ludovica",    text: "ballerina", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/miriana.jpg", title: "miriana", text: "ballerina", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/mirko.jpg", title: "mirko", text: "ballerino", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/robson.jpg", title: "robson",        text: "informatico", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/samuel.jpg", title: "samuel",        text: "fotografo", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/sandy.jpg", title: "sandy", text: "cantante", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/thomas.jpg", title: "thomas", text: "cantante", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/valentina.jpg", title: "valentina", text: "cantante", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/valeria.jpg", title: "valeria", text: "ballerina", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/1.jpg", title: "1", text: "ruolo", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/2.jpg", title: "2", text: "ruolo", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/3.jpg", title: "3", text: "ruolo", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/4.jpg", title: "4", text: "ruolo", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/5.jpg", title: "5", text: "ruolo", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/6.jpg", title: "6", text: "ruolo", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/7.jpg", title: "7", text: "ruolo", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/8.jpg", title: "8", text: "ruolo", link: "#", linkText: "contatta" }
+                , { image: "assets/img/team/9.jpg", title: "9", text: "ruolo", link: "#", linkText: "contatta" }]
+            };
+            var templateHeadings = Handlebars.compile($("#headings-template").html());
+            $("#headings").append(templateHeadings(context));
+            app.setActiveMenu("#about");
+        });
+    },
+    setActiveMenu: function (selector) {
+        $("#navbar>ul>li").removeClass(active);
+        $(selector).addClass("active");
+    },
+    loadCarousel: function () {
 
         //=======================================carousel=======================================
         var carousel = $("#myCarousel");
 
         var context = {
             items: [
-                { image: "assets/img/IMG_0383.JPG", title:  "titolo1", text: "testo testo testo testo testo testo testo testo testo 1", link: "#", linkText: "link1" }
-                ,{ image: "assets/img/IMG_0607.JPG", title: "titolo2", text: "testo testo testo testo testo testo testo testo testo 2", link: "#", linkText: "link2" }
-                ,{ image: "assets/img/IMG_0709.JPG", title: "titolo3", text: "testo testo testo testo testo testo testo testo testo 3", link: "#", linkText: "link3" }
-                ,{ image: "assets/img/IMG_0607.JPG", title: "titolo4", text: "testo testo testo testo testo testo testo testo testo 4", link: "#", linkText: "link4" }
-                ,{ image: "assets/img/IMG_0709.JPG", title: "titolo5", text: "testo testo testo testo testo testo testo testo testo 5", link: "#", linkText: "link5" }
-                ,{ image: "assets/img/IMG_0383.JPG", title: "titolo6", text: "testo testo testo testo testo testo testo testo testo 6", link: "#", linkText: "link6" }
-                ,{ image: "assets/img/IMG_0383.JPG", title: "titolo7", text: "testo testo testo testo testo testo testo testo testo 7", link: "#", linkText: "link7" }
-                ,{ image: "assets/img/IMG_0383.JPG", title: "titolo8", text: "testo testo testo testo testo testo testo testo testo 8", link: "#", linkText: "link8" }
+                { image: "assets/img/IMG_0383.JPG", title: "titolo1", text: "", link: "#", linkText: "contatta" }
+                , { image: "assets/img/IMG_0607.JPG", title: "titolo2", text: "testo testo testo testo testo testo testo testo testo 2", link: "#", linkText: "link2" }
+                , { image: "assets/img/IMG_0709.JPG", title: "titolo3", text: "testo testo testo testo testo testo testo testo testo 3", link: "#", linkText: "link3" }
+                , { image: "assets/img/IMG_0607.JPG", title: "titolo4", text: "testo testo testo testo testo testo testo testo testo 4", link: "#", linkText: "link4" }
+                , { image: "assets/img/IMG_0709.JPG", title: "titolo5", text: "testo testo testo testo testo testo testo testo testo 5", link: "#", linkText: "link5" }
+                , { image: "assets/img/IMG_0383.JPG", title: "titolo6", text: "testo testo testo testo testo testo testo testo testo 6", link: "#", linkText: "link6" }
+                , { image: "assets/img/IMG_0383.JPG", title: "titolo7", text: "testo testo testo testo testo testo testo testo testo 7", link: "#", linkText: "link7" }
+                , { image: "assets/img/IMG_0383.JPG", title: "titolo8", text: "testo testo testo testo testo testo testo testo testo 8", link: "#", linkText: "link8" }
             ]
         };
         var templateIndicators = Handlebars.compile($("#carousel-indicators-template").html());
         var templateItems = Handlebars.compile($("#carousel-items-template").html());
-        
+
         carousel.append(templateItems(context));
         carousel.append(templateIndicators(context));
 
         $(".carousel-indicators > li").first().addClass("active");
 
-        $(".carousel-inner > .item").each(function(index, element){
+        $(".carousel-inner > .item").each(function (index, element) {
             if (index == 0)
                 $(this).addClass("active first-slide");
             else if ($(this).is(':last-child'))
@@ -73,14 +107,43 @@ var app = {
         carousel.carousel("pause").removeData();
         carousel.carousel(0);
         //=======================================carousel end=======================================
-        //=======================================headings=======================================
-        var templateHeadings = Handlebars.compile($("#headings-template").html());
-        $("#headings").append(templateHeadings(context));
-        //=======================================headings end=======================================
-        //=======================================featurette=======================================
-        var templateFeaturette = Handlebars.compile($("#featurette-template").html());
-        $("#headings").append(templateFeaturette(context));
-        //=======================================featurette end=======================================
+    },
+    loadHome: function () {
+        $.get("home.html", function (data) {
+            $("#mainContent").html("");
+            $("#mainContent").html(data);
+            app.loadCarousel();
+            var context = {
+                items: [
+                    { image: "assets/img/IMG_0383.JPG", title: "titolo1", text: "", link: "#", linkText: "contatta" }
+                    , { image: "assets/img/IMG_0607.JPG", title: "titolo2", text: "testo testo testo testo testo testo testo testo testo 2", link: "#", linkText: "link2" }
+                    , { image: "assets/img/IMG_0709.JPG", title: "titolo3", text: "testo testo testo testo testo testo testo testo testo 3", link: "#", linkText: "link3" }
+                    , { image: "assets/img/IMG_0607.JPG", title: "titolo4", text: "testo testo testo testo testo testo testo testo testo 4", link: "#", linkText: "link4" }
+                    , { image: "assets/img/IMG_0709.JPG", title: "titolo5", text: "testo testo testo testo testo testo testo testo testo 5", link: "#", linkText: "link5" }
+                    , { image: "assets/img/IMG_0383.JPG", title: "titolo6", text: "testo testo testo testo testo testo testo testo testo 6", link: "#", linkText: "link6" }
+                    , { image: "assets/img/IMG_0383.JPG", title: "titolo7", text: "testo testo testo testo testo testo testo testo testo 7", link: "#", linkText: "link7" }
+                    , { image: "assets/img/IMG_0383.JPG", title: "titolo8", text: "testo testo testo testo testo testo testo testo testo 8", link: "#", linkText: "link8" }
+                ]
+            };
+            //=======================================headings=======================================
+            var templateHeadings = Handlebars.compile($("#headings-template").html());
+            $("#headings").append(templateHeadings(context));
+            //=======================================headings end=======================================
+            //=======================================featurette=======================================
+            var templateFeaturette = Handlebars.compile($("#featurette-template").html());
+            $("#headings").append(templateFeaturette(context));
+            //=======================================featurette end=======================================
+
+            app.setActiveMenu("#home");
+        });
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function () {
+        //app.receivedEvent('deviceready');
+        app.loadHome();
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {

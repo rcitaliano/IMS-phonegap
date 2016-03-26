@@ -53,8 +53,8 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li  id="#home" class="active"><a href="javascript:app.loadHome();">Home</a></li>
+                <li  id="#about"><a href="javascript:app.loadAbout();">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -76,91 +76,8 @@
       </div>
     </div>
 
+    <div id="mainContent" />
 
-    <!-- Carousel
-    ================================================== -->
-      <script id="carousel-indicators-template" type="text/x-handlebars-template">
-          <ol class="carousel-indicators">
-            {{#each items}}
-              <li data-target="#myCarousel" data-slide-to="{{@index}}"></li>
-            {{/each}}
-          </ol>
-    </script>
-    <script id="carousel-items-template" type="text/x-handlebars-template">
-        <div class="carousel-inner" role="listbox">
-            {{#each items}}
-            <div class="item">
-                <img src="{{image}}">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>{{title}}</h1>
-                        <p>{{text}}</p>
-                        <p><a class="btn btn-lg btn-primary" href="{{link}}" role="button">{{linkText}}</a></p>
-                    </div>
-                </div>
-            </div>            
-            {{/each}}
-        </div>
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </script>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    </div><!-- /.carousel -->
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-      <script id="headings-template" type="text/x-handlebars-template">
-          {{#each items}}
-          <div class="col-lg-4">
-              <img class="img-circle" src="{{image}}" alt="Generic placeholder image" width="140" height="140">
-              <h2>{{title}}</h2>
-              <p>{{text}}</p>
-              <p><a class="btn btn-default" href="{{link}}" role="button">{{linkText}} &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->          
-          {{/each}}
-      </script>
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div id="headings" class="row">
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-      <script id="featurette-template" type="text/x-handlebars-template">
-          {{#each items}}
-          <div class="row featurette">
-              <div class="col-md-7">
-                  <h2 class="featurette-heading">{{title}}<span class="text-muted">It'll blow your mind.</span></h2>
-                  <p class="lead"{{text}}</p>
-              </div>
-              <div class="col-md-5">
-                  <img class="featurette-image img-responsive center-block" src="{{image}}" alt="Generic placeholder image">
-              </div>
-          </div>
-          <hr class="featurette-divider">
-          {{/each}}
-      </script>
-
-      <!-- /END THE FEATURETTES -->
-
-
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
-
-    </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
